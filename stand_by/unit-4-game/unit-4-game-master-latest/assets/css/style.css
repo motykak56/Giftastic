@@ -1,0 +1,113 @@
+body {
+  background-image: url("assets/images/backgroundPurpleSmallBrick.PNG";
+  }
+#scoreBoard{
+  width:  200px;
+  height:  150px;
+  padding:  25px;
+  float:  center;
+
+}
+#character_assault{
+  width:  150px;
+  padding:  25px;
+  float:  right; 
+
+}
+
+#enemy_defense{
+  width:  150px;
+  padding:  25px;
+  float: left;
+}
+
+.locations{
+  align-items: center;
+  align-items:  stretch;
+}
+.enemies{
+  align-items:  stretch;
+  
+  }
+
+.superheroes{
+  float:  left;
+  
+  
+  }
+
+#chooseStmt {
+  width:  900;
+  height:  20;
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:  36pt;
+  font-display:  bold;
+    
+  }
+#batmanImg {
+  border:  3px solid black;
+  border-radius:  14px;
+  padding: 2px;
+  margin:  10px,75px,10px,75px;
+}
+
+
+#supermanImg {
+  border:  3px solid black;
+  border-radius:  14px;
+  padding: 2px;
+  margin:  10px,75px,10px,75px;
+}
+
+
+#princessImg {
+  border:  3px solid black;
+  border-radius:  14px;
+  padding: 2px;
+  margin:  10px,75px,10px,75px;
+}
+
+#pinkImg{
+  border:  3px solid black;
+  border-radius:  14px;
+  padding: 2px;
+  margin:  10px,75px,10px,75px;
+}
+  
+#sicknessImg {
+  border: 3px solid black;
+  border-radius: 14px;
+  padding: 5px;
+  margin:  10px,75px,10px,75px;
+}
+
+#bullyImg {
+  border:  3px solid black;
+  border-radius: 14px;
+  padding:  2px;
+  margin:  10px,75px,10px,75px;
+}
+
+#pestilenceImg {
+  border:  3px solid black;
+  border-radius:  14px;
+  padding:  5px;
+  margin:  175px,10px,175px,10px;
+}
+
+#slanderImg{
+  border:  3px solid black;
+  border-radius:  14px;
+  padding: 2px;
+  margin:  10px,75px,10px,75px;
+}
+
+
+#myContainer {
+    
+    background-image: url("/images/background.jpg");
+  }
+  
+ #myAnimation {
+  
+  }

@@ -1,0 +1,106 @@
+<!--DOCUMENT TYPE HTML-->
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Game - Battle for Life
+	</title>
+    <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+    <script src="assets/javascript/game.js"></script>
+    <!-- Added link to the jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Created an empty HTML div. Note that there is no content inside. -->
+<div id="empty-div"></div>
+<script type="text/javascript">
+
+
+<div id ="myContainer">
+    <document class="main_container">
+    <form>
+    <fieldset>
+        <div class="main_header_info">
+            <h1>The Game of Conquering!!</h1>
+            <h2>Life's challenges as they come your way...</h2>
+            <h2>with the supernatural strength that humans can draw upon 
+                inside them....</h2>
+        </div>
+    </fieldset>       
+    <fieldset>
+        <div class="scoreBoard">
+            <h2 id="scoreHead"> ScoreBoard </h2>
+            <h3 id="enemy-eu">Enemy Energy Units</h3>
+            <h3 id="you-eu">Your Energy Units</h3>
+        </div>
+    </fieldset>
+    <fieldset>
+        <div class="locations">
+            <div class="enemyLocation">
+                <h2 id="enemy_defense">Enemy Defense Location</h2>
+                <div id ="myAnimation_enemylocation"></div>
+            </div>
+        <div class="characterLocation">
+                <h2 id="character_assault">Your Assault Location</h2>
+                <div id ="myAnimation_characterlocation"></div>
+        </div>
+        </div>
+    </fieldset>    
+    
+    <fieldset>
+        <div class="superheroes">
+        <h2 class="characters" id="chooseStmt">Choose a character to represent you!!     </h2> 
+        <div id ="myAnimation_characters">
+            <h3 id="Batman">Batman</h3>
+                <input id="batmanImg" type="image" width="175" height="150" alt="Batman"
+                src="assets/images/character_Batman.jpg"/>
+            <h3 id="Superman">Superman</h3>
+                <input id="supermanImg" type="image" width="225" height="150" alt="Superman"
+                src="assets/images/character_Superman.jpg"/>
+            <h3 id="PowerOne">Power One</h3>
+                <input id="powerOneImg" type="image" width="160" height="210" alt="Native American Warrior"
+                src="assets/images/unisex_superhero.png"/>
+            <h3 id="Supercat">Supercat</h3>
+                <input id="supercatImg" type="image" width="225" height="150" alt="Superman"
+                src="assets/images/super_cat.jpg"/>
+            <h3 id="Storm">Storm</h3>
+                <input id="stormImg" type="image" width="160" height="210" alt="Native American Warrior"
+                src="assets/images/storm.jpg"/>
+            <h3 id="Pink">Pink Sword</h3>
+                <input id="pinkImg" type="image" width="160" height="210" alt="Pink, the Unsuspecting Warrior"
+                src="Assets/images/character_Pink.jpg"/>
+        </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <div class="enemies">  
+        <h2 class="enemies" id="choose_statement_enemy"> Choose your first enemy to battle!! </h2>
+        <div id ="myAnimation_enemies">
+            <h3 id="Sickness">Sickness Slime</h3>
+                <input id="sicknessImg" type="image" width= "200" height= "250" alt="sickness"
+                src="Assets/images/enemy_sick.jpg" />
+            <h3 id="Pestilence">Pestilence Paul</h3>
+                <input id="pestilenceImg" type="image" width= "200" height= "300" alt="pestilence"
+                src="Assets/images/enemy_infestation.jpg"/>
+            <h3 id="Bully">The Bully Shark</h3>
+                <input id="bullyImg" type="image" width= "175" height= "250" alt="bully"
+                src="Assets/images/enemy_bully_2_edited.jpg"/>
+            <h3 id="Slander">Slander Eddie</h3>
+                <input id="slanderImg" type="image" width= "225" height= "275" alt="slander"
+                src="Assets/images/enemy_slander.jpg"/>
+        </div>
+        </div>            
+    </fieldset>
+
+        
+ 
+    </form>
+
+
+    </div>     
+</document>
+</body>
+</html>
+
