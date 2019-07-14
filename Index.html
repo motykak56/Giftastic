@@ -1,106 +1,125 @@
 <!--DOCUMENT TYPE HTML-->
 <html>
-<html lang="en">
+<div lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Game - Battle for Life
 	</title>
-    <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
-    <script src="assets/javascript/game.js"></script>
-    <!-- Added link to the jQuery library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Created an empty HTML div. Note that there is no content inside. -->
-<div id="empty-div"></div>
-<script type="text/javascript">
-
-
-<div id ="myContainer">
+<form id="myHeaderContainer">
     <document class="main_container">
-    <form>
     <fieldset>
         <div class="main_header_info">
-            <h1>The Game of Conquering!!</h1>
-            <h2>Life's challenges as they come your way...</h2>
-            <h2>with the supernatural strength that humans can draw upon 
-                inside them....</h2>
+        <ol>
+            <li><h1>The Game of Conquering!!</h1></li>
+            <li><h2>Life's challenges can come in one right after the other...</h2></li>
+            <li><h2>but you can beat them with the supernatural strength inside you....</h2></li>
+            <li><h1>Just see yourself as a superhero!!</h1></li>
+        </ol>
         </div>
     </fieldset>       
     <fieldset>
-        <div class="scoreBoard">
-            <h2 id="scoreHead"> ScoreBoard </h2>
-            <h3 id="enemy-eu">Enemy Energy Units</h3>
-            <h3 id="you-eu">Your Energy Units</h3>
-        </div>
+        <div id="scoreBoard"><h1>Score Board</h1></div>
+            <h2> Your Score This Round: <span id="yourScore">1000</span></h2>
+            <h2> Your Total Score: <span id="yourScoreTotal">5000</span></h2>
+            <h2> Enemy Score This Round: <span id="enemyScore">1000</span></h2>
+            <h2> Enemy Total Score : <span id="enemyScoreTotal">5000</span></h2>
+        </form>
+    </fieldset>
+    <fieldset>
+        <div id="timeclock"><h2>Time Left before End of Round</h2></div>
+        <div id='countdown'><h2>60</h2></div>
     </fieldset>
     <fieldset>
         <div class="locations">
-            <div class="enemyLocation">
-                <h2 id="enemy_defense">Enemy Defense Location</h2>
-                <div id ="myAnimation_enemylocation"></div>
+            <canvas id="myCanvas" width="200" height="100"></canvas>
+            <div id="enemyLocation">
+                <div id="enemy_defense"><h2>Enemy Stronghold</h2></div>
+                <div id ="myAnimation_enemylocation">
+                </div>
             </div>
-        <div class="characterLocation">
-                <h2 id="character_assault">Your Assault Location</h2>
-                <div id ="myAnimation_characterlocation"></div>
+            <div id="characterLocation">
+                <div id="character_assault"><h2>Your Assault Location</h2></div>
+                <div id ="myAnimation_characterLocation">
+                </div>
+            </div>
+        
+            <form>
+            <ul id="buttonsFire">
+            <fr>
+            <li><img id="bamImg" type="image" width="100" height="100" alt="bam" src="assets/images/bam.PNG"></li>
+            <li><img id="powImg" type="image" width="100" height="100" alt="pow" src="assets/images/pow.PNG"></li>
+            </fr>
+            </ul>
+            </form>
         </div>
-        </div>
-    </fieldset>    
-    
+    </fieldset>
+</form>
+
+<form>
     <fieldset>
-        <div class="superheroes">
-        <h2 class="characters" id="chooseStmt">Choose a character to represent you!!     </h2> 
-        <div id ="myAnimation_characters">
-            <h3 id="Batman">Batman</h3>
+        <div id="chooseStmt"><h2>Choose a superhero to represent you!!</h2></div>
+        <div class="superheroes"> 
+        <ul>
+            <li><h3>Batman</h3>
                 <input id="batmanImg" type="image" width="175" height="150" alt="Batman"
                 src="assets/images/character_Batman.jpg"/>
-            <h3 id="Superman">Superman</h3>
+            </li>
+            <li><h3>Superman</h3>
                 <input id="supermanImg" type="image" width="225" height="150" alt="Superman"
                 src="assets/images/character_Superman.jpg"/>
-            <h3 id="PowerOne">Power One</h3>
-                <input id="powerOneImg" type="image" width="160" height="210" alt="Native American Warrior"
+            </li>
+            <li><h3>Power One</h3>
+                <input id="powerOneImg" type="image" width="110" height="150" alt="Neutral Gender Warrior"
                 src="assets/images/unisex_superhero.png"/>
-            <h3 id="Supercat">Supercat</h3>
-                <input id="supercatImg" type="image" width="225" height="150" alt="Superman"
+            </li>
+            <li><h3>Supercat</h3>
+                <input id="supercatImg" type="image" width="225" height="150" alt="Supercat"
                 src="assets/images/super_cat.jpg"/>
-            <h3 id="Storm">Storm</h3>
-                <input id="stormImg" type="image" width="160" height="210" alt="Native American Warrior"
+            </li>
+            <li><h3>Storm</h3>
+                <input id="stormImg" type="image" width="110" height="150" alt="Woman of Color Warrior"
                 src="assets/images/storm.jpg"/>
-            <h3 id="Pink">Pink Sword</h3>
-                <input id="pinkImg" type="image" width="160" height="210" alt="Pink, the Unsuspecting Warrior"
+            </li>
+            <li><h3 id="Pink">Pink Sword</h3>
+                <input id="pinkImg" type="image" width="110" height="150" alt="Pink, the Unsuspecting Warrior"
                 src="Assets/images/character_Pink.jpg"/>
-        </div>
+            </li>
+        </ul>
         </div>
     </fieldset>
     <fieldset>
-        <div class="enemies">  
-        <h2 class="enemies" id="choose_statement_enemy"> Choose your first enemy to battle!! </h2>
-        <div id ="myAnimation_enemies">
-            <h3 id="Sickness">Sickness Slime</h3>
-                <input id="sicknessImg" type="image" width= "200" height= "250" alt="sickness"
+        <div class ="chooseStatement"><h2>Choose an enemy for battle!!</h2></div>
+        <div class="enemies"> 
+        <ul>
+            <li><h3>Sickness Slime</h3>
+                <input id="sicknessImg" type="image" width= "150" height= "150" alt="sickness"
                 src="Assets/images/enemy_sick.jpg" />
-            <h3 id="Pestilence">Pestilence Paul</h3>
-                <input id="pestilenceImg" type="image" width= "200" height= "300" alt="pestilence"
+            </li>
+            <li><h3>Pestilence Paul</h3>
+                <input id="pestilenceImg" type="image" width= "150" height= "150" alt="pestilence"
                 src="Assets/images/enemy_infestation.jpg"/>
-            <h3 id="Bully">The Bully Shark</h3>
-                <input id="bullyImg" type="image" width= "175" height= "250" alt="bully"
+            </li>
+            <li><h3>The Bully Shark</h3>
+                <input id="bullyImg" type="image" width= "150" height= "150" alt="bully"
                 src="Assets/images/enemy_bully_2_edited.jpg"/>
-            <h3 id="Slander">Slander Eddie</h3>
-                <input id="slanderImg" type="image" width= "225" height= "275" alt="slander"
+            </li>
+            <li><h3>Slander Barb</h3>
+                <input id="slanderImg" type="image" width= "150" height= "150" alt="slander"
                 src="Assets/images/enemy_slander.jpg"/>
+            </li>
+        </ul>
         </div>
-        </div>            
-    </fieldset>
-
-        
- 
-    </form>
+    </fieldset>        
+</form> 
 
 
-    </div>     
-</document>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/game.js"></script>
 </body>
 </html>
 

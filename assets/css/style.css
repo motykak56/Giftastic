@@ -1,40 +1,104 @@
 body {
   background-image: 
-  url("assets/images/backgroundDarkPurpleSmallBrick.PNG");
+  url("../images/backgroundMutedSpringGreen.jpg");
+  z-index: -1;
+}
+h1 {
+font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size:  x-large;
+font-display: bold;
+color:  black;
+}
+
+h2{
+font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size:  large;
+font-display: bold;
+color: black;
+}
+
+h3 {
+ font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-size:  medium;
+ font-display: bold;
+ color:  red;
+
+}
+
+.bullet{
+  position: absolute;
+}
+  li{
+    list-style-type: none;
+    color:  black;
   }
+
 #scoreBoard{
-  width:  200px;
-  height:  150px;
-  padding:  25px;
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:  22pt;
+  font-display:  bold;
+  color:red;
   float:  center;
+}
+#scoreHead{
+  background-color:  white;
+  float:  center;
+  font-size:  24pt;
+  font-display:  bold;
+  position:  relative;
+}
+
+#enemyEu{
+  background-color:  black;
+  float:  left;
+  font-size:  18pt;
+  font-display:  bold;
+  position: relative;
+}
+#youEu{
+  background-color:  black;
+  float:  right;
+  font-size:  18pt;
+  font-display:  bold;
+  position:  relative;
+}
+
+#characterLocation{
+  width:  250px;
+  padding:  25px;
+  float:  left; 
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:  18pt;
+  font-display:  bold;
 
 }
-#character_assault{
-  width:  150px;
-  padding:  25px;
-  float:  right; 
 
-}
-
-#enemy_defense{
-  width:  150px;
+#enemyLocation{
+  width:  250px;
   padding:  25px;
-  float: left;
+  float: right;
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:  18pt;
+  font-display:  bold;
 }
 
 .locations{
   align-items: center;
   align-items:  stretch;
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:  24pt;
+  font-display:  bold;
 }
 .enemies{
-  align-items:  stretch;
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:  24pt;
+  font-display:  bold;
   
   }
-
 .superheroes{
-  float:  left;
-  
-  
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 24pt;
+  font-display:  bold;
   }
 
 #chooseStmt {
@@ -43,15 +107,15 @@ body {
   font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size:  36pt;
   font-display:  bold;
-    
-  }
+  }  
+
 #batmanImg {
   border:  3px solid black;
   border-radius:  14px;
   padding: 2px;
   margin:  10px,75px,10px,75px;
+  color:  black;
 }
-
 
 #supermanImg {
   border:  3px solid black;
@@ -60,8 +124,21 @@ body {
   margin:  10px,75px,10px,75px;
 }
 
+#powerOneImg {
+  border:  3px solid black;
+  border-radius:  14px;
+  padding: 2px;
+  margin:  10px,75px,10px,75px;
+}
 
-#princessImg {
+#supercatImg {
+  border:  3px solid black;
+  border-radius:  14px;
+  padding: 2px;
+  margin:  10px,75px,10px,75px;
+}
+
+#stormImg {
   border:  3px solid black;
   border-radius:  14px;
   padding: 2px;
@@ -78,7 +155,7 @@ body {
 #sicknessImg {
   border: 3px solid black;
   border-radius: 14px;
-  padding: 5px;
+  padding: 2px;
   margin:  10px,75px,10px,75px;
 }
 
@@ -92,8 +169,8 @@ body {
 #pestilenceImg {
   border:  3px solid black;
   border-radius:  14px;
-  padding:  5px;
-  margin:  175px,10px,175px,10px;
+  padding:  2px;
+  margin:  10px,75px,10px,75px;
 }
 
 #slanderImg{
@@ -106,9 +183,9 @@ body {
 
 #myContainer {
     
-    background-image: url("assets/images/backgroundDarkPurpleSmallBrick");
+    background-image: url("../images/backgroundMutedSpringGreen.jpg");
+    z-index: -1;
   }
   
- #myAnimation {
   
-  }
+  

@@ -1,199 +1,76 @@
 
-function run (e){
-var player="userclick1";
-var character=["batmanImg", "supermanImg", "powerOneImg", "supercatImg", "stormImg", "pinkImg"];
+
+$(document).ready(function() {
+  // all custom jQuery will go here
+  //$('#characterLocation').empty();
   
-function choosePlayer (){
-  var batmanImg = document.getElementById("batmanImg")
-  el.addEventListener("click")
-  var supermanImg = document.getElementById("supermanImg")
-  el.addEventListener("click")
-  var powerOneImg = document.getElementById("powerOneImg")
-  el.addEventListener("click")
-  var supercatImg = document.getElementById("supercatImg")
-  el.addEventListener("click")
-  var stormImg = document.getElementById("stormImg")
-  el.addEventListener("click")
-  var pinkImg = document.getElementById("pinkImg")
-  el.addEventListener("click")
 
-if(click==="batmanImg"){
-    $("batmanImg").animate({
-      top: "-=200px"}, "normal")
-      var player="batmanImg";
-    }
-else if(click==="supermanImg"){
-    $("supermanImg").animate({
-      top:  "-=200px"}, "normal")
-      var player="supermanImg";
-    }
-else if(click=="powerOneImg"){
-    $("powerOneImg").animate({
-      top: "-=200px"}, "normal")
-      var player="powerOneImg";
-    }
-else if(click=="supercatImg"){
-    $("supercatImg").animate({
-      top: "-=200px"}, "normal")
-      var player="supercatImg";
-      }
-else if(click=="stormImg"){
-    $("stormImg").animate({
-      top:  "-=200px"}, "normal")
-      var player="stormImg";
-    }
-else if (click=="pinkImg"){
-    $("pinkImg").animate({
-        top:  "-=200px"}, "normal")
-        var player="pinkImg";
-    }
-    $("image").click(function(){
-      $(this).data('clicked', true);
-      if($('#character').data('clicked')) {
-        alert('this is your player for the game');
-    }
-  })
-}
-function chooseEnemy (){
-var enemy=["sicknessImg", "pestilenceImg", "bullyImg","slanderImg"];
-  var sicknessImg = document.getElementById("sicknessImg")
-  el.addEventListener("click")
-  var pestilenceImg = document.getElementById("pestilenceImg")
-  el.addEventListener("click")
-  var bullyImg = document.getElementById("bullyImg")
-  el.addEventListener("click")
-  var supercatImg = document.getElementById("slanderImg")
-  el.addEventListener("click")
 
-if(click==="sicknessImg"){
-  $("sicknessImg").animate({
-    top: "-=400px"}, "normal");
-    var opposition="sicknessImg"
-  }
-else if(click==="pestilenceImg"){
-  $("pestilenceImg").animate({
-    top:  "-=400px"}, "normal");
-    var opposition="pestilenceImg"
-  }
-else if(click=="bullyImg"){
-  $("bullyImg").animate({
-    top: "-=400px"}, "normal")
-    var opposition="bullyImg";
-  }
-else if (click=="slanderImg"){
-  $("slanderImg").animate({
-    top:  "-=400px"}, "normal")
-    var opposition="slanderImg"; 
-  }
-}
-$("image").click(function(){
-  $(this).data('clicked', true);
-  if($('#enemy').data('clicked')) {
-    alert('this is your first opposition for the game');
-}
-})
-    var enemyPlaying1="userclick2";
-    var enemyPlaying2="userclick3";
-    var enemyPlaying3="userclick4";
-    var enemyPlaying4="userclick5";
-
-document.onkeyup=function(click){
-    var userclick=event.click;}
+  $(".superheroes").on("click","li",function(){
+    event.preventDefault();
+    var item = $(this);
+    console.log(item.length);
     
-    // Visibility Buttons
-      // ==================
 
-      // Make Visible
-   //   $(".vis-button").on("click", function() {
-   //     $(".captain-planet").animate({opacity: "1"
-   //     });
-   //   });
+ // Move the player from .superheroes to #character_assault
+  $('#characterLocation').append(item);
+    var player=$(item);
 
-      // Make Invisible
-  //    $(".invis-button").on("click", function() {
-  //      $(".captain-planet").animate({
-  //        opacity: "0.0"
-  //      });
-  //    });
+  //$("#btnRemove").on("click", "li", function() {
+      $("#characters").player.remove();
+      $("#characters").hide();
+      $("#character_assault").hide();
 
-      // Move Buttons
-      // ============
+  });
+    //remove the item from the .superheroes class
+  //item.toggleClass('.superheroes');
 
-      // Move Character Playing upward 
- //     $(".up-button").on("click", function() {
- //       $("charPlaying").animate({
-//          top: "-=200px"
- //       }, "normal");
- //     });
+    //fade out all the other characters except for the one chosen
+  //$(".superheroes").fadeOut("slow");
 
-      // Move Character Playing Downward
-//      $(".down-button").on("click", function() {
-//        $(".captain-planet").animate({
-//          top: "+=200px"
-//        }, "normal");
-//      });
+  // $('#enemyLocation').empty();
 
-      // Move Character Playing Leftward
-//      $(".left-button").on("click", function() {
-//        $(".captain-planet").animate({
-//          left: "-=200px"
-//        }, "normal");
-//      });
+  $(".enemies").on("click","li",function(){
+    event.preventDefault();
+    var item2 = $(this);
+    console.log(item2.length);
+  
+ 
 
-      // Move Character Playing to the Right
-//      $(".right-button").on("click", function() {
-//        $(".captain-planet").animate({
-//          left: "+=200px"
-//        }, "normal");
-//      });
+ // Move the player from .superheroes to #character_assault
+ //$(item).animate({left: "-30px"}, 9000);
+ //move the item left by thirty pixels
+  $('#enemyLocation').append(item2);
 
-      // Bring Character Playing Back to His First Position
-//      $(".back-button").on("click", function() {
-//        $(".captain-planet").animate({
-//          top: "50px",
-//          left: "80px"
-//        }, "fast");
-//      });
+    //remove the item from the .superheroes class
+  //item.toggleClass('.superheroes');
 
-      // Move Events for Keyboard Presses
-      // ============================
+    //fade out all the other characters except for the one chosen
+  //$(".superheroes").fadeOut("slow");
 
-      // Keyboard Up
-//      $(document).keyup(function(e) {
-//        switch (e.which) {
-//        case 38:
-//          $(".captain-planet").animate({
-//            top: "-=200px"
-//          }, "normal");
-//        }
-//      });
+})
 
-      // Keyboard Down
-//    $(document).keyup(function(e) {
-//        switch (e.which) {
-//        case 40:
-//          $(".captain-planet").animate({
-//            top: "+=200px"
-//          }, "normal");
-//        }
-//      });
+var crClockInit1 = null;
+var crClockInterval = null;
 
-      // Keyboard Left
-//      $(document).keyup(function(e) {
-//        switch (e.which) {
-//        case 37:
-//          $(".captain-planet").animate({
-//            left: "-=200px"
-//          }, "normal");
-//        }
-//      });
+$(".enemies").on("click","li",function crInitClock(){
+  event.preventDefault();
+  var item2 = $(this);
+  console.log(item2.length);
+})
 
-//   Keyboard Right
-//     $(document).keyup(function(e) {
-//        switch (e.which) {
-//        case 39:
-//          $(".captain-planet").animate({
-//            left: "+=200px"
-//          }, "normal");
-//         }
-//      })}
+function crInitClock() {
+    crClockInit1 = setInterval(function() {
+        if (moment().format("SSS") <= 40) {
+            clearInterval(crClockInit1);
+            crStartClockNow();
+        }})}
+
+
+function crStartClockNow() {
+    crClockInterval = setInterval(function() {
+        $('#clock').html(moment().format('D. MMMM YYYY H:mm:ss'));
+    }, 1000);
+
+  }
+})
